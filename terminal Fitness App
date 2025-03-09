@@ -1,0 +1,103 @@
+# Python test
+print("This is a fitness tracking program")
+
+# Declaring the different variables for the steps which we will use later in the program
+mondaySteps = 0
+tuesdaySteps = 0
+wedSteps = 0
+thursSteps = 0
+fridaySteps = 0
+saturdaySteps = 0
+sundaySteps = 0
+
+# Making a main menu function
+def mainMenu():
+    print("Welcome to the main menu")
+    print("Enter in 1 to add a step count for each day")
+    print("Enter in 2 to view your recorded step counts")
+    print("Enter in 3 to delete a step from record")
+    print("Enter in 4 to stop your program")
+
+mainMenu()
+
+mainChoice = int(input("Enter in your choice: "))  # Fixed missing parenthesis
+
+if mainChoice == 1:
+    addStepCount()
+elif mainChoice == 2:
+    viewSteps()
+elif mainChoice == 3:
+    delStep()
+elif mainChoice == 4:
+    exitProgram()
+
+# Declaring the add step function to allow the user to add steps to their days.
+def addStepCount():
+    addStep = input("Enter the day: ")
+    steps = input("Enter step count: ")  # Taking step count input as a string
+
+    if addStep == "Monday" or addStep == "monday":
+        mondaySteps = steps
+    elif addStep == "Tuesday" or addStep == "tuesday":
+        tuesdaySteps = steps
+    elif addStep == "Wednesday" or addStep == "wednesday":
+        wedSteps = steps
+    elif addStep == "Thursday" or addStep == "thursday":
+        thursSteps = steps
+    elif addStep == "Friday" or addStep == "friday":
+        fridaySteps = steps
+    elif addStep == "Saturday" or addStep == "saturday":
+        saturdaySteps = steps
+    elif addStep == "Sunday" or addStep == "sunday":
+        sundaySteps = steps
+
+# Fixing syntax errors in viewSteps()
+def viewSteps():
+    viewChoice = input("What day would you like to view your steps for? ")
+
+    if viewChoice == "Monday" or viewChoice == "monday":
+        print(f"Your steps for Monday: {mondaySteps}")
+    elif viewChoice == "Tuesday" or viewChoice == "tuesday":
+        print(f"Your steps for Tuesday: {tuesdaySteps}")
+    elif viewChoice == "Wednesday" or viewChoice == "wednesday":
+        print(f"Your steps for Wednesday: {wedSteps}")
+    elif viewChoice == "Thursday" or viewChoice == "thursday":
+        print(f"Your steps for Thursday: {thursSteps}")
+    elif viewChoice == "Friday" or viewChoice == "friday":
+        print(f"Your steps for Friday: {fridaySteps}")
+    elif viewChoice == "Saturday" or viewChoice == "saturday":
+        print(f"Your steps for Saturday: {saturdaySteps}")
+    elif viewChoice == "Sunday" or viewChoice == "sunday":
+        print(f"Your steps for Sunday: {sundaySteps}")
+
+# Fixing syntax errors in delStep()
+def delStep():
+    deleteChoice = input("What day would you like to delete? ")
+
+    if deleteChoice == "Monday" or deleteChoice == "monday":
+        mondaySteps = 0
+        print("Steps deleted.")
+    elif deleteChoice == "Tuesday" or deleteChoice == "tuesday":
+        tuesdaySteps = 0
+        print("Steps deleted")
+    elif deleteChoice == "Wednesday" or deleteChoice == "wednesday":
+        wedSteps = 0
+        print("Steps deleted.")
+    elif deleteChoice == "Thursday" or deleteChoice == "thursday":
+        thursSteps = 0
+        print("Steps deleted")
+    elif deleteChoice == "Friday" or deleteChoice == "friday":
+        fridaySteps = 0
+        print("Steps deleted")
+    elif deleteChoice == "Saturday" or deleteChoice == "saturday":
+        saturdaySteps = 0
+        print("Steps deleted")
+    elif deleteChoice == "Sunday" or deleteChoice == "sunday":
+        sundaySteps = 0
+        print("Steps deleted")
+    else:
+        print("No step count was found")
+
+# Fixing exitProgram() function
+def exitProgram():
+    print("You have chosen to exit, thank you")
